@@ -6,7 +6,7 @@
 # Description:                                                                 #
 #     This code is written as part of project "introbioinfo-exercise03-setup". #
 # ---                                                                          #
-# Last Modified: 2021-02-26 19:13:48                                           #
+# Last Modified: 2021-03-02 15:01:07                                           #
 # Modified By: Hyunbin Kim (khb7840@gmail.com)                                 #
 # ---                                                                          #
 # Copyright © 2021 Hyunbin Kim, All rights reserved                            #
@@ -18,7 +18,7 @@ ARG EXERCISE_NAME=exercise03
 RUN apt-get update && apt-get install -y build-essential vim nano gzip wget tar libgd-dev libpng-dev libjpeg-dev libwebp-dev libjpeg62-turbo libcairo2-dev libsdl-pango-dev lua5.3 libreadline-dev && rm -rf /var/lib/apt/lists/*
 
 # install necessary tools
-RUN conda install -c conda-forge -c bioconda gnuplot mummer spades
+RUN conda install -c conda-forge -c bioconda gnuplot mummer spades quast
 
 # create a user
 RUN useradd --create-home --shell /bin/bash $EXERCISE_NAME
