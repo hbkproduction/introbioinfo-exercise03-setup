@@ -6,13 +6,13 @@
 # Description:                                                                 #
 #     This code is written as part of project "introbioinfo-exercise03-setup". #
 # ---                                                                          #
-# Last Modified: 2021-03-02 15:01:07                                           #
+# Last Modified: 2021-03-03 15:11:34                                           #
 # Modified By: Hyunbin Kim (khb7840@gmail.com)                                 #
 # ---                                                                          #
 # Copyright © 2021 Hyunbin Kim, All rights reserved                            #
 ################################################################################
 
-FROM continuumio/miniconda3
+FROM conda/miniconda3
 USER root
 ARG EXERCISE_NAME=exercise03
 RUN apt-get update && apt-get install -y build-essential vim nano gzip wget tar libgd-dev libpng-dev libjpeg-dev libwebp-dev libjpeg62-turbo libcairo2-dev libsdl-pango-dev lua5.3 libreadline-dev && rm -rf /var/lib/apt/lists/*
